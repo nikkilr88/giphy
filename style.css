@@ -1,0 +1,51 @@
+html, body {
+  text-align: center;
+  background: #000;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+#mainImg {
+  display: block;
+  margin: 0 auto;
+  
+}
+
+#searchBar {
+  margin: 0 0 50px 0;
+  padding: 10px;
+  width: 350px;
+  background: none;
+  font-size: 32px;
+  color: whitesmoke;
+  border: 2px solid whitesmoke;
+  border-radius: 50px;
+  outline: none;
+}
+
+#results {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#results li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 10px;
+  transition: all 0.3s;
+}
+
+#results li:hover {
+  transform: scale(1.1);
+}
+.hidden {
+  display: none;
+}
+
+img {
+  height: 150px;
+  border-radius: 5px;
+}
