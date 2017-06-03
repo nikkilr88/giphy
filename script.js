@@ -40,10 +40,12 @@ $(document).ready(function(){
     console.log(link);
   $('iframe').attr('src', link);  
   $('#iframeContain').show(); 
+  $('iframe').show();
   });
   
   $('#close').on('click', function(){
     $('#iframeContain').hide();
+    $('iframe').hide();
     $('iframe').attr('src', '');  
   });
   } else {
