@@ -89,12 +89,16 @@ iframe {
 }
 
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 640px) {
+  
+  #searchBar {
+    width: 90%;
+  }
+  img {
+    height: 100px;
+  }
   #mainImg {
     width: 100%;
     height: auto;
-  }
-  #searchBar {
-    width: 90%;
   }
 }
