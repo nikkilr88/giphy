@@ -54,12 +54,12 @@ img {
 
 iframe {
   position: relative;
-  height: 95vh;
-  width: 90vw;
+  height: 100vh;
+  width: 100vw;
   margin: 0 auto;
   right: 0;
   left: 0;
-  top: 15px;
+  top: 0;
   background: #222;
   border: none;
   display: none;
@@ -67,21 +67,20 @@ iframe {
 
 #close {
   background: whitesmoke;
-  color: #999;
+  color: #222;
   position: absolute;
-  height: 30px;
-  width: 30px;
-  line-height: 30px;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
   border-radius: 100%;
-  top: 10px;
-  left: -10px;
+  bottom: 5px;
+  right: 5px;
   z-index: 999;
-  
+  opacity: 0.2;
 }
 
 #iframeContain {
   position: fixed;
-  width: 90vw;
   display: none;
   margin: 0 auto;
   right: 0;
