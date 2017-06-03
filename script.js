@@ -5,7 +5,7 @@ $(document).ready(function(){
   $('#searchBar').keyup(function(){
     $('#results').empty();
     var searchTerm = $('#searchBar').val();
-    var url = 'https://api.giphy.com/v1/gifs/search?&q='+searchTerm+'&limit=10&api_key=dc6zaTOxFJmzC';
+    var url = 'https://api.giphy.com/v1/gifs/search?&q='+searchTerm+'&limit=15&api_key=dc6zaTOxFJmzC';
     
     $.getJSON(url, function(giphy){
       for(var i = 0; i < giphy.data.length; i++) {
