@@ -49,3 +49,13 @@ img {
   height: 150px;
   border-radius: 5px;
 }
+
+@media only screen and (max-width: 420px) {
+  #mainImg {
+    width: 90%;
+    height: auto;
+  }
+  #searchBar {
+    width: 90%;
+  }
+}
