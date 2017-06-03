@@ -40,6 +40,7 @@ body {
 
 #results li:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 .hidden {
   display: none;
@@ -49,6 +50,44 @@ img {
   height: 150px;
   border-radius: 5px;
 }
+
+
+iframe {
+  position: relative;
+  height: 95vh;
+  width: 90vw;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+  top: 15px;
+  background: #222;
+  border: none;
+}
+
+#close {
+  background: whitesmoke;
+  color: #999;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  border-radius: 100%;
+  top: 10px;
+  left: -10px;
+  z-index: 999;
+  
+}
+
+#iframeContain {
+  position: fixed;
+  width: 90vw;
+  display: none;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
 
 @media only screen and (max-width: 420px) {
   #mainImg {
