@@ -13,7 +13,7 @@ $(document).ready(function(){
       }
     });
   });
-  $('#results').on('mouseenter','img', function(){
+  $('#results').on('mouseenter taphold','img', function(){
     $(this).parent().find('.hidden').show();
     $(this).parent().find('.showing').hide();
   });
