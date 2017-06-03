@@ -13,12 +13,26 @@ $(document).ready(function(){
       }
     });
   });
-  $('#results').on('mouseenter taphold','img', function(){
-    $(this).parent().find('.hidden').show();
-    $(this).parent().find('.showing').hide();
-  });
-  $('#results').on('mouseleave','li', function(){
-    $(this).find('.hidden').hide();
-    $(this).find('.showing').show();
-  });
+  
+  if($(window).width() <= 420) {
+    $('#results').on('click taphold','img', function(){
+      $(this).parent().find('.hidden').show();
+      $(this).parent().find('.showing').hide();
+      return false;
+    });
+    $('#results').on('mouseleave','li', function(){
+      $(this).find('.hidden').hide();
+      $(this).find('.showing').show();
+    });
+   } else {
+    $('#results').on('mouseenter taphold','img', function(){
+      $(this).parent().find('.hidden').show();
+      $(this).parent().find('.showing').hide();
+    });
+    $('#results').on('mouseleave','li', function(){
+      $(this).find('.hidden').hide();
+      $(this).find('.showing').show();
+    });
+  }
+  
 });
