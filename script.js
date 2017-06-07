@@ -1,6 +1,8 @@
 /* global $ */
 
 $(document).ready(function(){
+  var start, limit;
+
   
   window.oncontextmenu = function(event) {
      event.preventDefault();
@@ -10,14 +12,40 @@ $(document).ready(function(){
   
   $('#searchBar').off();
   $('#searchBar').keyup(function(){
-    $('#results').empty();
+    start = 20;
     var searchTerm = $('#searchBar').val();
-    var url = 'https://api.giphy.com/v1/gifs/search?&q='+searchTerm+'&limit=15&api_key=dc6zaTOxFJmzC';
+    var url = 'https://api.giphy.com/v1/gifs/search?&q='+searchTerm+'&limit=100&api_key=dc6zaTOxFJmzC';
+   
+    $('#results').empty();
+    $('#load').text('Load More').css('opacity','1');
     
+    if($('#searchBar').val() === '') {
+     $('#load').hide();
+    } else {
+      $('#load').show();
+    }
+     
     $.getJSON(url, function(giphy){
-      for(var i = 0; i < giphy.data.length; i++) {
+      for(var i = 0; i < 20; i++) {
          $('#results').append('<li><img class="showing" src="'+giphy.data[i].images.downsized_still.url+'"><img class="hidden" src="'+giphy.data[i].images.preview_gif.url+'"></li>');
       }
+      
+       $('#load').off();
+       $('#load').on('click', function() {  
+         // start = start+10;
+         // limit = start+10;
+         console.log(start)
+         
+         if(start < 90) {
+           start = start+10;
+           limit = start+10;
+           for(var i = start; i < limit; i++) {
+             $('#results').append('<li><img class="showing" src="'+giphy.data[i].images.downsized_still.url+'"><img class="hidden" src="'+giphy.data[i].images.preview_gif.url+'"></li>');
+         }
+         } else {
+           $('#load').text('All Loaded').css('opacity','0.3');
+         }
+      });
     });
   });
   

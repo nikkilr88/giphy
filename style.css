@@ -88,6 +88,20 @@ iframe {
   top: 0;
 }
 
+#load {
+  padding: 10px;
+  display: none;
+  border: none;
+  border-radius: 25px;
+  background: #9C32FF;
+  color: whitesmoke;
+  font-weight: bold;
+  outline: none;
+}
+
+#load:hover {
+  cursor: pointer;
+}
 
 @media only screen and (max-width: 640px) {
   
