@@ -40,11 +40,12 @@ $(document).ready(function(){
          console.log(start)
          
          if(start < 90) {
-           start = start+10;
+           
            limit = start+10;
            for(var i = start; i < limit; i++) {
              $('#results').append('<li><img class="showing" src="'+giphy.data[i].images.downsized_still.url+'"><img class="hidden" src="'+giphy.data[i].images.preview_gif.url+'"></li>');
          }
+         start = start+10;
          } else {
            $('#load').text('All Loaded').css('opacity','0.3');
          }
