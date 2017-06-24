@@ -22,7 +22,10 @@ $(document).ready(function(){
     if($('#searchBar').val() === '') {
      $('#load').hide();
     } else {
-      $('#load').show();
+      setTimeout(function() {
+         $('#load').show();
+      },1000);
+     
     }
      
     $.getJSON(url, function(giphy){
