@@ -14,7 +14,10 @@ $(document).ready(function(){
   $('#searchBar').keyup(function(){
     start = 20;
     var searchTerm = $('#searchBar').val();
-    var url = 'https://api.giphy.com/v1/gifs/search?&q='+searchTerm+'&limit=100&api_key=dc6zaTOxFJmzC';
+    
+    if(searchTerm !== '') {
+      var url = 'https://api.giphy.com/v1/gifs/search?&q='+searchTerm+'&limit=100&api_key=dc6zaTOxFJmzC';
+    }
    
     $('#results').empty();
     $('#load').text('Load More').css('opacity','1');
