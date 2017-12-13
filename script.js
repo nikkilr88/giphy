@@ -63,10 +63,9 @@ $(function() {
   else {
     //Turn whole li into link and open in new tab
     $('#results').on('click', 'img', function() {
-      var link = $(this).parent().find('.hidden').attr('src');
+      var link = $(this).parent().find('.gif').attr('src');
       window.open(link);
     });
-
   }
 
 });
@@ -75,6 +74,7 @@ function displayPreview(data) {
   for (var i = 0; i < 20; i++) {
     $('#results').append('<li><img class="photo" src="' + data.data[i].images.downsized_still.url + '"><img class="gif" src="' + data.data[i].images.preview_gif.url + '"></li>');
   }
+  $('#load').show();
 }
 
 function loadMore() {
@@ -97,11 +97,5 @@ function showHideLoad() {
 
   if ($('#searchBar').val() === '') {
     $('#load').hide();
-  }
-  else {
-    setTimeout(function() {
-      $('#load').show();
-    }, 1000);
-
   }
 }
